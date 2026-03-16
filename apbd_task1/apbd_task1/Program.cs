@@ -3,12 +3,20 @@
 double average = CalculateAverage(numbers);
 Console.WriteLine("Average = " + average);
 
+int max = CalculateMax(numbers);
+Console.WriteLine("Max = " + max);
+
 Console.WriteLine("sup, apbd");
 string name = Console.ReadLine();
 Console.WriteLine("Hello " + name);
 
 static double CalculateAverage(int[] values)
 {
+    if (values.Length == 0)
+    {
+        return 0;
+    }
+
     int sum = 0;
 
     for (int i = 0; i < values.Length; i++)
@@ -17,4 +25,23 @@ static double CalculateAverage(int[] values)
     }
 
     return (double)sum / values.Length;
+}
+fsd
+static int CalculateMax(int[] values)
+{
+    if (values.Length == 0)
+    {
+        return 0;
+    }
+
+    int max = values[0];
+
+    for (int i = 1; i < values.Length; i++)
+    {
+        if (values[i] > max)
+        {
+            max = values[i];
+        }
+    }
+    return max;
 }

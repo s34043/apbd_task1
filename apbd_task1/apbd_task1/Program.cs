@@ -9,7 +9,7 @@ Console.WriteLine("Max = " + max);
 int min = CalculateMin(numbers);
 Console.WriteLine("Min = " + min);
 
-Console.WriteLine("sup, apbd");
+Console.WriteLine("Hello from main branch");
 string name = Console.ReadLine();
 Console.WriteLine("Hello " + name);
 

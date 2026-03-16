@@ -6,6 +6,9 @@ Console.WriteLine("Average = " + average);
 int max = CalculateMax(numbers);
 Console.WriteLine("Max = " + max);
 
+int min = CalculateMin(numbers);
+Console.WriteLine("Min = " + min);
+
 Console.WriteLine("sup, apbd");
 string name = Console.ReadLine();
 Console.WriteLine("Hello " + name);
@@ -26,7 +29,7 @@ static double CalculateAverage(int[] values)
 
     return (double)sum / values.Length;
 }
-fsd
+
 static int CalculateMax(int[] values)
 {
     if (values.Length == 0)
@@ -43,5 +46,26 @@ static int CalculateMax(int[] values)
             max = values[i];
         }
     }
+
     return max;
+}
+
+static int CalculateMin(int[] values)
+{
+    if (values.Length == 0)
+    {
+        return 0;
+    }
+
+    int min = values[0];
+
+    for (int i = 1; i < values.Length; i++)
+    {
+        if (values[i] < min)
+        {
+            min = values[i];
+        }
+    }
+
+    return min;
 }
